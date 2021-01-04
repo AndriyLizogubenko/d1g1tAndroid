@@ -1,0 +1,26 @@
+platform: &platform
+    platform: android
+
+device_config: &device_config
+    ios:
+        platformName: 'ios'
+        platformVersion: '13.5'
+        deviceName: 'iPhone 11 Pro'
+        automationName: 'XCUITest'
+        appPackage: ''
+        appActivity: ''
+        noReset: 'True'
+        folder: ''
+    android:
+        platformName: 'android'
+        platformVersion: '11'
+        deviceName: 'emulator-5554'
+        automationName: 'uiautomator2'
+        appPackage: 'd1g1twealth.d1g1t.com.d1g1t'
+        appActivity: 'd1g1twealth.d1g1t.com.ui.login.LoginActivity'
+        noReset: 'True'
+        folder: '/Users/andriylizogubenko/Downloads/app-d1g1t-dev-release.apk'
+
+production:
+    <<: *platform
+    <<: *device_config
